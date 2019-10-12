@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart'
     show debugDefaultTargetPlatformOverride;
 import './src/screens/home.dart';
+import './src/screens/coringa.dart';
 
 
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget{
       initialRoute: '/',
       routes: {
         '/': (context) => Home(),
+        '/coringa': (context) => Coringa(),
       }
     );
   }
