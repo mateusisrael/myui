@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart'
     show debugDefaultTargetPlatformOverride;
+import './src/screens/home.dart';
+
+
 
 void main() {
   // Debugar no Linux
@@ -16,17 +19,11 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MyUi',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('MyUi'),
-        ),
 
-        body: Container(
-          child: Center(
-            child: Text('Hello')
-          ),
-        ),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+      }
     );
   }
 }
