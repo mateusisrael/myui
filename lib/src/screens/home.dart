@@ -1,14 +1,33 @@
 import 'package:flutter/material.dart';
+import './sobre.dart';
 
 
 class Home extends StatelessWidget{
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Container(
+          child: Icon(Icons.add),
+        )
+      ),
       appBar: AppBar(
-        backgroundColor: Colors.cyan[400],
-        title: Text('MyUi', style: TextStyle(),),
+        actions: <Widget>[
+
+          Container(
+            margin: EdgeInsets.only(right: 17),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/sobre');
+              },
+              child: Icon(Icons.announcement),
+            ),
+          )
+        ],
+
+        title: Text('MyUi', style: Theme.of(context).textTheme.headline),
         centerTitle: true,
       ),
 
@@ -19,7 +38,6 @@ class Home extends StatelessWidget{
             Tela(nome: 'Coringa', rota: '/coringa',),
             Tela(nome: 'Guardar dados'),
             Tela(nome: 'Animações',),
-            Tela(),
             Tela(),
 
           ]
