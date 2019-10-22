@@ -35,8 +35,8 @@ class Home extends StatelessWidget{
         padding: EdgeInsets.only(top: 15.0),
         child: ListView(
           children: <Widget>[
-            Tela(nome: 'Coringa', rota: '/coringa',),
-            Tela(nome: 'Guardar dados'),
+            Tela(nome: 'Responsividade', rota: '/responsividade',),
+            Tela(nome: 'Frutas', rota: '/frutas'),
             Tela(nome: 'Animações',),
             Tela(),
 
@@ -62,7 +62,8 @@ class Tela extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 4, right: 4, bottom: 2),
+      height: 65,
+      padding: EdgeInsets.only(left: 4, right: 4),
       child: GestureDetector(
         onTap: () {
           Navigator.pushNamed(context, rota);
